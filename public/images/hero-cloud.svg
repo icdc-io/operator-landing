@@ -1,0 +1,152 @@
+<svg viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cloud infrastructure illustration">
+  <defs>
+    <linearGradient id="cloudGrad" x1="150" y1="120" x2="450" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="cloudStroke" x1="150" y1="120" x2="450" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#2563eb" flood-opacity="0.15"/>
+    </filter>
+    <style>
+      .flow-line { stroke-dasharray: 8 6; animation: dash 2s linear infinite; }
+      .flow-line-slow { stroke-dasharray: 8 6; animation: dash 3s linear infinite; }
+      @keyframes dash { to { stroke-dashoffset: -28; } }
+    </style>
+  </defs>
+
+  <!-- Grid background -->
+  <g opacity="0.05" stroke="#2563eb" stroke-width="1">
+    <line x1="0" y1="50" x2="600" y2="50"/><line x1="0" y1="100" x2="600" y2="100"/>
+    <line x1="0" y1="150" x2="600" y2="150"/><line x1="0" y1="200" x2="600" y2="200"/>
+    <line x1="0" y1="250" x2="600" y2="250"/><line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="0" y1="350" x2="600" y2="350"/><line x1="0" y1="400" x2="600" y2="400"/>
+    <line x1="0" y1="450" x2="600" y2="450"/>
+    <line x1="75" y1="0" x2="75" y2="500"/><line x1="150" y1="0" x2="150" y2="500"/>
+    <line x1="225" y1="0" x2="225" y2="500"/><line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="375" y1="0" x2="375" y2="500"/><line x1="450" y1="0" x2="450" y2="500"/>
+    <line x1="525" y1="0" x2="525" y2="500"/>
+  </g>
+
+  <!-- Cloud shape -->
+  <g filter="url(#softShadow)">
+    <path d="M 185 232 C 185 210, 202 194, 224 194 C 228 172, 247 156, 272 156 C 287 140, 308 133, 330 138 C 350 122, 376 124, 390 144 C 412 144, 428 160, 428 180 C 444 184, 455 198, 455 215 C 455 235, 439 248, 420 248 L 208 248 C 194 248, 185 241, 185 232 Z"
+      fill="url(#cloudGrad)" stroke="url(#cloudStroke)" stroke-width="1.5"/>
+  </g>
+  <text x="320" y="210" text-anchor="middle" fill="#2563eb" font-size="11" font-family="system-ui,sans-serif" font-weight="600" opacity="0.9">CLOUD PLATFORM</text>
+
+  <!-- Server node bottom-left -->
+  <g transform="translate(62,348)">
+    <rect width="90" height="68" rx="8" fill="#f0f7ff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <rect x="8" y="10" width="74" height="11" rx="3" fill="#dbeafe"/>
+    <rect x="8" y="25" width="74" height="11" rx="3" fill="#dbeafe"/>
+    <rect x="8" y="40" width="74" height="11" rx="3" fill="#dbeafe"/>
+    <circle cx="73" cy="15.5" r="3" fill="#22c55e"/>
+    <circle cx="73" cy="30.5" r="3" fill="#22c55e"/>
+    <circle cx="73" cy="45.5" r="3" fill="#f59e0b"/>
+    <text x="45" y="63" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui,sans-serif" font-weight="500">VM Server</text>
+  </g>
+
+  <!-- Server node bottom-right -->
+  <g transform="translate(444,348)">
+    <rect width="90" height="68" rx="8" fill="#f0f7ff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <rect x="8" y="10" width="74" height="11" rx="3" fill="#dbeafe"/>
+    <rect x="8" y="25" width="74" height="11" rx="3" fill="#dbeafe"/>
+    <rect x="8" y="40" width="74" height="11" rx="3" fill="#dbeafe"/>
+    <circle cx="73" cy="15.5" r="3" fill="#22c55e"/>
+    <circle cx="73" cy="30.5" r="3" fill="#22c55e"/>
+    <circle cx="73" cy="45.5" r="3" fill="#22c55e"/>
+    <text x="45" y="63" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui,sans-serif" font-weight="500">GPU Server</text>
+  </g>
+
+  <!-- GPU node top-left -->
+  <g transform="translate(44,115)">
+    <rect width="82" height="62" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <rect x="14" y="10" width="54" height="32" rx="4" fill="#2563eb"/>
+    <rect x="19" y="15" width="9" height="9" rx="1" fill="#93c5fd"/>
+    <rect x="32" y="15" width="9" height="9" rx="1" fill="#93c5fd"/>
+    <rect x="45" y="15" width="9" height="9" rx="1" fill="#93c5fd"/>
+    <rect x="19" y="28" width="9" height="9" rx="1" fill="#93c5fd"/>
+    <rect x="32" y="28" width="9" height="9" rx="1" fill="#bfdbfe"/>
+    <rect x="45" y="28" width="9" height="9" rx="1" fill="#93c5fd"/>
+    <text x="41" y="58" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui,sans-serif" font-weight="500">GPU Node</text>
+  </g>
+
+  <!-- Storage node top-right -->
+  <g transform="translate(472,115)">
+    <rect width="82" height="62" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <ellipse cx="41" cy="20" rx="23" ry="7" fill="#2563eb"/>
+    <rect x="18" y="20" width="46" height="14" fill="#1d4ed8"/>
+    <ellipse cx="41" cy="34" rx="23" ry="7" fill="#2563eb"/>
+    <text x="41" y="58" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui,sans-serif" font-weight="500">Storage</text>
+  </g>
+
+  <!-- Network node left -->
+  <g transform="translate(88,238)">
+    <circle cx="22" cy="22" r="22" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <circle cx="22" cy="22" r="6" fill="#2563eb"/>
+    <circle cx="22" cy="11" r="3.5" fill="#2563eb" opacity="0.7"/>
+    <circle cx="32" cy="28" r="3.5" fill="#2563eb" opacity="0.7"/>
+    <circle cx="12" cy="28" r="3.5" fill="#2563eb" opacity="0.7"/>
+    <line x1="22" y1="15" x2="22" y2="17" stroke="#2563eb" stroke-width="1.5"/>
+    <line x1="25" y1="25" x2="29" y2="26" stroke="#2563eb" stroke-width="1.5"/>
+    <line x1="19" y1="25" x2="15" y2="26" stroke="#2563eb" stroke-width="1.5"/>
+  </g>
+
+  <!-- Security node right -->
+  <g transform="translate(484,238)">
+    <circle cx="22" cy="22" r="22" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <path d="M22 11 L31 14.5 L31 23 C31 28.5,27 32,22 34 C17 32,13 28.5,13 23 L13 14.5 Z" fill="#2563eb" opacity="0.9"/>
+    <path d="M18 22 L21 25 L26 18" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Connecting lines -->
+  <line x1="126" y1="146" x2="208" y2="202" stroke="#93c5fd" stroke-width="1.5" class="flow-line"/>
+  <line x1="472" y1="146" x2="408" y2="202" stroke="#93c5fd" stroke-width="1.5" class="flow-line-slow"/>
+  <line x1="130" y1="260" x2="188" y2="238" stroke="#93c5fd" stroke-width="1.5" class="flow-line"/>
+  <line x1="484" y1="260" x2="452" y2="238" stroke="#93c5fd" stroke-width="1.5" class="flow-line-slow"/>
+  <path d="M 248 248 C 200 285, 158 315, 107 348" stroke="#93c5fd" stroke-width="1.5" class="flow-line" fill="none"/>
+  <path d="M 392 248 C 430 285, 462 315, 489 348" stroke="#93c5fd" stroke-width="1.5" class="flow-line-slow" fill="none"/>
+
+  <!-- Animated dots -->
+  <circle r="4" fill="#2563eb" filter="url(#glow)" opacity="0.9">
+    <animateMotion dur="2.5s" repeatCount="indefinite" path="M 126 146 L 208 202"/>
+  </circle>
+  <circle r="4" fill="#0ea5e9" filter="url(#glow)" opacity="0.9">
+    <animateMotion dur="3s" repeatCount="indefinite" path="M 472 146 L 408 202"/>
+  </circle>
+  <circle r="3.5" fill="#2563eb" filter="url(#glow)" opacity="0.9">
+    <animateMotion dur="2s" repeatCount="indefinite" begin="0.5s" path="M 248 248 C 200 285, 158 315, 107 348"/>
+  </circle>
+  <circle r="3.5" fill="#0ea5e9" filter="url(#glow)" opacity="0.9">
+    <animateMotion dur="2.8s" repeatCount="indefinite" begin="1s" path="M 392 248 C 430 285, 462 315, 489 348"/>
+  </circle>
+
+  <!-- Connection dots -->
+  <circle cx="208" cy="202" r="5" fill="#2563eb" opacity="0.5"/>
+  <circle cx="408" cy="202" r="5" fill="#2563eb" opacity="0.5"/>
+
+  <!-- Status badges -->
+  <g transform="translate(30,55)">
+    <rect width="80" height="22" rx="11" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <circle cx="13" cy="11" r="4" fill="#22c55e"/>
+    <text x="23" y="15" fill="#1e40af" font-size="9" font-family="system-ui,sans-serif" font-weight="600">99.99% SLA</text>
+  </g>
+  <g transform="translate(488,55)">
+    <rect width="78" height="22" rx="11" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <circle cx="13" cy="11" r="4" fill="#0ea5e9"/>
+    <text x="23" y="15" fill="#1e40af" font-size="9" font-family="system-ui,sans-serif" font-weight="600">10 Gbps</text>
+  </g>
+  <g transform="translate(226,440)">
+    <rect width="148" height="22" rx="11" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <circle cx="13" cy="11" r="4" fill="#f59e0b"/>
+    <text x="23" y="15" fill="#1e40af" font-size="9" font-family="system-ui,sans-serif" font-weight="600">Автомасштабирование</text>
+  </g>
+</svg>

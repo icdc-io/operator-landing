@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "title": "{companyName} — Next Generation Cloud Services",
+    "description": "{companyName} — a reliable cloud platform for business. Virtual servers, GPU computing, secure storage, and 24/7 support."
+  },
+  "header": {
+    "login": "Log In",
+    "order": "Get Started"
+  },
+  "hero": {
+    "title": "Next Generation Cloud Platform",
+    "subtitle": "Infrastructure Without Limits",
+    "description": "Scalable cloud resources for your business — from virtual machines to GPU clusters for artificial intelligence workloads.",
+    "cta": "Get Started",
+    "documentation": "Documentation"
+  },
+  "tabs": {
+    "heading": "Full Spectrum of Cloud Services",
+    "description": "Choose the right tools to build a reliable cloud infrastructure for your business",
+    "items": {
+      "compute": {
+        "label": "Compute",
+        "services": [
+          { "title": "Virtual Machines", "description": "Flexible vCPU and RAM configurations from 1 to 96 cores for any workload." },
+          { "title": "GPU Servers", "description": "NVIDIA A100/H100 for high-performance computing and neural networks." },
+          { "title": "Dedicated Servers", "description": "Physical servers with full resource access and no noisy neighbors." },
+          { "title": "Containers", "description": "Kubernetes-based container orchestration with auto-scaling." }
+        ]
+      },
+      "tools": {
+        "label": "Tools",
+        "services": [
+          { "title": "Managed Databases", "description": "PostgreSQL, MySQL, MongoDB with automatic backups and high availability." },
+          { "title": "CI/CD Platform", "description": "Build and deployment automation with GitLab and GitHub integration." },
+          { "title": "Monitoring", "description": "Grafana and Prometheus — full observability for your infrastructure." },
+          { "title": "Serverless", "description": "Run functions without managing servers, pay only for actual usage." }
+        ]
+      },
+      "network": {
+        "label": "Network",
+        "services": [
+          { "title": "Virtual Network (VPC)", "description": "Isolated private network with full control over topology and routing." },
+          { "title": "Load Balancer", "description": "L4/L7 balancing with SSL termination and automatic health checks." },
+          { "title": "CDN", "description": "Global content delivery with caching at 50+ nodes worldwide." },
+          { "title": "VPN & DDoS Protection", "description": "Site-to-Site VPN and attack mitigation up to 1 Tbps." }
+        ]
+      },
+      "storage": {
+        "label": "Storage",
+        "services": [
+          { "title": "S3 Object Storage", "description": "Scalable storage with S3-compatible API and versioning support." },
+          { "title": "Block Disks", "description": "SSD and NVMe disks with up to 100,000 IOPS and data replication." },
+          { "title": "NFS File System", "description": "Shared file access across multiple instances with zero configuration." },
+          { "title": "Backup", "description": "Automated snapshots with configurable schedules and retention policies." }
+        ]
+      },
+      "support": {
+        "label": "Support",
+        "services": [
+          { "title": "24/7 Technical Support", "description": "Our engineering team is always ready to help — response within 15 minutes." },
+          { "title": "Dedicated Account Manager", "description": "A dedicated manager for enterprise clients and project guidance." },
+          { "title": "Knowledge Base", "description": "Extensive documentation, guides, and ready-made architectural solutions." },
+          { "title": "SLA 99.99%", "description": "Guaranteed availability level with financial accountability." }
+        ]
+      },
+      "infrastructure": {
+        "label": "Infrastructure",
+        "services": [
+          { "title": "Data Center Type", "description": "Tier III data center with N+1 redundancy, fault-tolerant architecture, and 24/7 monitoring of all engineering systems." },
+          { "title": "Power", "description": "Two independent power feeds, industrial-grade UPS, and diesel generators for uninterrupted operation even during power grid failures." },
+          { "title": "Internet Channels", "description": "Multihoming with multiple independent backbone carriers and automatic traffic redistribution." },
+          { "title": "Hardware SLA", "description": "Guaranteed hardware replacement within 1 hour with round-the-clock on-site engineers at the data center." }
+        ]
+      }
+    }
+  },
+  "gpuVms": {
+    "badge": "New",
+    "heading": "Next Generation GPU Virtual Machines",
+    "description": "Access the most powerful NVIDIA GPUs without capital investment. Deploy GPU instances in minutes and pay only for actual usage time.",
+    "features": [
+      "NVIDIA A100 and H100 Tensor Core GPU",
+      "Up to 8 GPUs in a single instance",
+      "NVLink for inter-GPU communication",
+      "Per-second billing"
+    ],
+    "cta": "Try GPU"
+  },
+  "machineLearning": {
+    "heading": "Infrastructure for Machine Learning",
+    "description": "Accelerate model development and training with our cloud platform optimized for ML and AI workloads. Full tool stack from data preparation to production deployment.",
+    "features": [
+      { "icon": "Cpu", "label": "High-Performance GPUs" },
+      { "icon": "Zap", "label": "10x Training Speed" },
+      { "icon": "Layers", "label": "MLOps Platform" },
+      { "icon": "Activity", "label": "Experiment Monitoring" }
+    ]
+  },
+  "gpuBenefits": {
+    "heading": "Benefits of GPU in the Cloud",
+    "description": "Gain a competitive edge with cloud GPU computing",
+    "items": [
+      { "icon": "Zap", "title": "Maximum Performance", "description": "Process petabytes of data and train complex neural networks tens of times faster." },
+      { "icon": "Scale", "title": "Flexible Scaling", "description": "Scale GPU count up or down based on your current workload demands." },
+      { "icon": "DollarSign", "title": "Cost Savings", "description": "Eliminate expensive hardware — pay only for what you actually use." },
+      { "icon": "Clock", "title": "Fast Start", "description": "Launch a GPU instance in 60 seconds and start computing immediately." },
+      { "icon": "Shield", "title": "Reliability & Security", "description": "Isolated environment, data encryption, and compliance with security standards." },
+      { "icon": "Globe", "title": "Global Infrastructure", "description": "Place your workloads closer to users at data centers around the world." },
+      { "icon": "Lock", "title": "Compliance", "description": "GDPR, ISO 27001, and personal data localization requirements compliance." },
+      { "icon": "BarChart3", "title": "Detailed Analytics", "description": "Real-time monitoring of GPU utilization, costs, and performance metrics." }
+    ]
+  },
+  "itSolutions": {
+    "heading": "Modern IT Solutions for Your Business",
+    "description": "We provide a full spectrum of cloud services that allow your company to focus on business growth while we take care of infrastructure management. From startups to enterprises — our platform is ready for any challenge.",
+    "stats": [
+      { "value": "99.99%", "label": "Uptime SLA" },
+      { "value": "500+", "label": "Clients" },
+      { "value": "24/7", "label": "Support" },
+      { "value": "10 Gbps", "label": "Network" }
+    ]
+  },
+  "cta": {
+    "heading": "Achieve Your Goals Together With Us",
+    "description": "Join hundreds of companies that already trust {companyName} with their IT infrastructure. Start your free trial today.",
+    "button": "Contact Us"
+  },
+  "contact": {
+    "heading": "Contact Us",
+    "subheading": "Leave a request and we will get back to you shortly",
+    "form": {
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "emailRequired": "Please enter a valid email address",
+      "comment": "Comment",
+      "commentPlaceholder": "Describe your request or question...",
+      "consent1": "I confirm that I have read the Organization's Personal Data Protection Policy and the Notice on Personal Data Processing Conditions.",
+      "consent2": "I give my free, explicit, and informed consent to the processing of my personal data as specified in the Notice on Personal Data Processing Conditions.",
+      "consentRequired": "Your consent is required to submit the form",
+      "submit": "Submit",
+      "success": "Thank you! We will contact you shortly.",
+      "privacyPolicy": "Personal Data Protection Policy",
+      "dataProcessing": "Notice on Personal Data Processing Conditions"
+    },
+    "info": {
+      "consultationLabel": "Sales Consultation",
+      "supportLabel": "Technical Support",
+      "email1": "info@cloud-expert.by",
+      "email2": "support@cloud-expert.by",
+      "phone1": "+375 17 388-00-00",
+      "phone2": "+375 17 388-00-01",
+      "socialLabel": "Follow Us"
+    }
+  },
+  "footer": {
+    "copyrightSuffix": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "notFound": {
+    "code": "404",
+    "heading": "Page Not Found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "back": "Back to Home"
+  },
+  "cookie": {
+    "text": "We use cookies, and your personal data may be processed through our website. The use of cookies ensures the effective operation of the resource and improves user interaction.",
+    "accept": "Accept",
+    "cookiePolicy": "Cookie Policy",
+    "privacyPolicy": "Privacy Policy",
+    "dataProcessing": "Personal Data Processing Notice"
+  }
+}
