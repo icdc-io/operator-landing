@@ -14,7 +14,7 @@
 | `NEXT_PUBLIC_SUPPORT_EMAILS` | Comma-separated Email(s) for technical support contact block |
 | `NEXT_PUBLIC_SUPPORT_PHONES` | Comma-separated Phone(s) for technical support contact block |
 | `NEXT_PUBLIC_SOCIAL_LINKS` | Comma-separated social media URLs |
-| `FORMSPREE_FORM_ID` | Formspree form ID for the contact form (server-only, no `NEXT_PUBLIC_` prefix) |
+| `FORMSPREE_FORM_ID` | Formspree form ID for the contact form (runtime variable) |
 
 If these env vars are not defined, the corresponding UI elements will not display:
 
@@ -57,7 +57,7 @@ Using Docker Compose (recommended) — reads all variables from `.env.local` aut
 docker compose up --build
 ```
 
-Or manually — `NEXT_PUBLIC_*` variables must be passed as build args since they are baked in at build time:
+Or manually — `NEXT_PUBLIC_*` variables must be passed as build args, `FORMSPREE_FORM_ID` is passed at runtime:
 
 ```bash
 docker build \
@@ -73,7 +73,7 @@ docker build \
   --build-arg NEXT_PUBLIC_SOCIAL_LINKS="..." \
   -t cloud-expert .
 
-docker run -p 3000:3000 -e FORMSPREE_FORM_ID="..." cloud-expert
+# Run with different form IDs for dev/prod
+docker run -p 3000:3000 -e FORMSPREE_FORM_ID="dev_form_id" cloud-expert
+docker run -p 3000:3000 -e FORMSPREE_FORM_ID="prod_form_id" cloud-expert
 ```
-
-> Note: `FORMSPREE_FORM_ID` is the only runtime variable — all `NEXT_PUBLIC_*` variables must be provided at build time.
