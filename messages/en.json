@@ -134,8 +134,9 @@
       "emailRequired": "Please enter a valid email address",
       "comment": "Comment",
       "commentPlaceholder": "Describe your request or question...",
-      "consent1": "I confirm that I have read the Organization's Personal Data Protection Policy and the Notice on Personal Data Processing Conditions.",
-      "consent2": "I give my free, explicit, and informed consent to the processing of my personal data as specified in the Notice on Personal Data Processing Conditions.",
+      "consent1": "I confirm that I have read the",
+      "consent2Prefix": "I give my free, explicit, and informed consent to the processing of my personal data as specified in the",
+      "dataProcessingLink": "Notice on Personal Data Processing Conditions",
       "consentRequired": "Your consent is required to submit the form",
       "submit": "Submit",
       "success": "Thank you! We will contact you shortly.",
@@ -155,6 +156,8 @@
   "footer": {
     "copyrightSuffix": "All rights reserved.",
     "privacyPolicy": "Privacy Policy",
+    "cookiePolicy": "Cookie Policy",
+    "dataProcessing": "Data Processing Policy",
     "terms": "Terms of Service"
   },
   "notFound": {

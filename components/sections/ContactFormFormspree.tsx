@@ -10,7 +10,7 @@ interface FormErrors {
   consent?: string;
 }
 
-export default function ContactFormFormspree({ formId }: { formId: string }) {
+export default function ContactFormFormspree({ formId, hasDataProcessing }: { formId: string; hasDataProcessing: boolean }) {
   const tf = useTranslations('contact.form');
   const [state, submit] = useForm(formId);
   const [consent1, setConsent1] = useState(false);
@@ -23,7 +23,7 @@ export default function ContactFormFormspree({ formId }: { formId: string }) {
     if (!emailInput || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput)) {
       newErrors.email = tf('emailRequired');
     }
-    if (!consent1 || !consent2) {
+    if (!consent1 || (hasDataProcessing && !consent2)) {
       newErrors.consent = tf('consentRequired');
     }
     setErrors(newErrors);
@@ -94,23 +94,26 @@ export default function ContactFormFormspree({ formId }: { formId: string }) {
             {tf('consent1')}{' '}
             <a href="/docs/privacy-policy.pdf" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
               {tf('privacyPolicy')}
-            </a>
-            {' '}и{' '}
-            <a href="/docs/data-processing.pdf" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-              {tf('dataProcessing')}
             </a>.
           </span>
         </label>
 
-        <label className="flex items-start gap-3 cursor-pointer">
-          <input
-            type="checkbox"
-            checked={consent2}
-            onChange={(e) => setConsent2(e.target.checked)}
-            className="mt-0.5 w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500 flex-shrink-0 cursor-pointer"
-          />
-          <span className="text-xs text-gray-600 leading-relaxed">{tf('consent2')}</span>
-        </label>
+        {hasDataProcessing && (
+          <label className="flex items-start gap-3 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={consent2}
+              onChange={(e) => setConsent2(e.target.checked)}
+              className="mt-0.5 w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500 flex-shrink-0 cursor-pointer"
+            />
+            <span className="text-xs text-gray-600 leading-relaxed">
+              {tf('consent2Prefix')}{' '}
+              <a href="/docs/data-processing.pdf" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+                {tf('dataProcessingLink')}
+              </a>.
+            </span>
+          </label>
+        )}
 
         {errors.consent && <p className="text-red-500 text-xs">{errors.consent}</p>}
       </div>

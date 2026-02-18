@@ -1,4 +1,6 @@
 import { setRequestLocale } from 'next-intl/server';
+import { existsSync } from 'fs';
+import { join } from 'path';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import CookieNotice from '@/components/layout/CookieNotice';
@@ -31,6 +33,10 @@ export default async function HomePage({ params }: Props) {
   const supportPhones = parseList(process.env.NEXT_PUBLIC_SUPPORT_PHONES);
   const socialLinks = parseList(process.env.NEXT_PUBLIC_SOCIAL_LINKS);
 
+  const hasGa = Boolean(process.env.GA_DATASTREAM_ID);
+  const docsDir = join(process.cwd(), 'public', 'docs');
+  const hasDataProcessing = existsSync(join(docsDir, 'data-processing.pdf'));
+
   return (
     <>
       <SchemaOrg />
@@ -50,10 +56,11 @@ export default async function HomePage({ params }: Props) {
           supportEmails={supportEmails}
           supportPhones={supportPhones}
           socialLinks={socialLinks}
+          hasDataProcessing={hasDataProcessing}
         />
       </main>
       <Footer />
-      <CookieNotice />
+      {hasGa && <CookieNotice />}
     </>
   );
 }

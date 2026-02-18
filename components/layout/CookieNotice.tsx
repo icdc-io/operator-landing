@@ -31,13 +31,9 @@ export default function CookieNotice() {
             <Link href="/docs/cookie-policy.pdf" className="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors">
               {t('cookiePolicy')}
             </Link>
-            {', '}
+            {' '}и{' '}
             <Link href="/docs/privacy-policy.pdf" className="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors">
               {t('privacyPolicy')}
-            </Link>
-            {', '}
-            <Link href="/docs/data-processing.pdf" className="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors">
-              {t('dataProcessing')}
             </Link>
             .
           </p>

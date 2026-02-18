@@ -5,7 +5,7 @@ import Logo from '@/components/layout/Logo';
 
 export default async function Header() {
   const t = await getTranslations('header');
-  const companyName = process.env.NEXT_PUBLIC_COMPANY_NAME ?? 'Cloud Expert';
+  const companyName = process.env.NEXT_PUBLIC_BRAND_NAME ?? 'Cloud';
   const loginUrl = process.env.NEXT_PUBLIC_HEADER_LOGIN_URL;
 
   return (

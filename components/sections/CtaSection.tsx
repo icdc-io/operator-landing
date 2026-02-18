@@ -3,7 +3,7 @@ import Button from '@/components/ui/Button';
 
 export default async function CtaSection() {
   const t = await getTranslations('cta');
-  const companyName = process.env.NEXT_PUBLIC_COMPANY_NAME ?? 'Cloud Expert';
+  const companyName = process.env.NEXT_PUBLIC_BRAND_NAME ?? 'Cloud';
 
   return (
     <section className="relative min-h-[50vh] bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 flex items-center overflow-hidden">

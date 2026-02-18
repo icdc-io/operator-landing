@@ -8,6 +8,7 @@ import { routing } from '@/i18n/routing';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import '../globals.css';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -35,7 +36,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'meta' });
-  const companyName = process.env.NEXT_PUBLIC_COMPANY_NAME ?? 'Cloud Expert';
+  const companyName = process.env.NEXT_PUBLIC_BRAND_NAME ?? 'Cloud';
 
   const faviconSrc = existsSync(join(process.cwd(), 'public', 'logo', 'logo.png'))
     ? '/logo/logo.png'
@@ -67,9 +68,11 @@ export default async function LocaleLayout({ children, params }: Props) {
   setRequestLocale(locale);
   const messages = await getMessages();
 
+  const gaId = process.env.GA_DATASTREAM_ID ?? '';
   return (
     <html lang={locale} className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="antialiased bg-white text-gray-900">
+        {gaId && <GoogleAnalytics gaId={gaId} />}
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

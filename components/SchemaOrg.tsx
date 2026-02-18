@@ -1,5 +1,5 @@
 export default function SchemaOrg() {
-  const companyName = process.env.NEXT_PUBLIC_COMPANY_NAME ?? 'Cloud Expert';
+  const companyName = process.env.NEXT_PUBLIC_BRAND_NAME ?? 'Cloud';
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',

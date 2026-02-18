@@ -3,6 +3,7 @@ services:
     build:
       context: .
       args:
+        - NEXT_PUBLIC_BRAND_NAME=${NEXT_PUBLIC_BRAND_NAME}
         - NEXT_PUBLIC_COMPANY_NAME=${NEXT_PUBLIC_COMPANY_NAME}
         - NEXT_PUBLIC_HEADER_LOGIN_URL=${NEXT_PUBLIC_HEADER_LOGIN_URL}
         - NEXT_PUBLIC_DOCS_URL=${NEXT_PUBLIC_DOCS_URL}
@@ -17,4 +18,5 @@ services:
       - "3009:3000"
     environment:
       - FORMSPREE_FORM_ID=${FORMSPREE_FORM_ID}
+      - GA_DATASTREAM_ID=${GA_DATASTREAM_ID}
     restart: unless-stopped
