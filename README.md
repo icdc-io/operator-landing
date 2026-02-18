@@ -76,7 +76,7 @@ Using Docker Compose (recommended) — reads all variables from `.env.local` aut
 docker compose up --build
 ```
 
-Or manually — `NEXT_PUBLIC_*` variables must be passed as build args, `FORMSPREE_FORM_ID` is passed at runtime:
+Or manually — `NEXT_PUBLIC_*` variables must be passed as build args, `FORMSPREE_FORM_ID` and `GA_DATASTREAM_ID` is passed at runtime:
 
 ```bash
 docker build \
