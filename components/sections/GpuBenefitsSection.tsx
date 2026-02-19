@@ -1,9 +1,9 @@
 import { getTranslations } from 'next-intl/server';
-import { Zap, Scale, Clock, Shield, Globe, Lock, BarChart3, DollarSign } from 'lucide-react';
+import { Zap, Scale, Clock, Shield, Database, LayoutDashboard, BarChart3, DollarSign } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 const ICON_MAP: Record<string, LucideIcon> = {
-  Zap, Scale, Clock, Shield, Globe, Lock, BarChart3, DollarSign,
+  Zap, Scale, Clock, Shield, Database, LayoutDashboard, BarChart3, DollarSign,
 };
 
 interface BenefitItem {

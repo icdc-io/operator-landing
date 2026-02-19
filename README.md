@@ -6,6 +6,7 @@
 |---|---|
 | `NEXT_PUBLIC_BRAND_NAME` | Brand name displayed across the site (header, metadata, CTA, schema) |
 | `NEXT_PUBLIC_COMPANY_NAME` | Legal/company name displayed in the footer |
+| `NEXT_PUBLIC_COMPANY_LINK` | Optional URL for the company name in the footer copyright (shows as a link with hover underline) |
 | `NEXT_PUBLIC_HEADER_LOGIN_URL` | URL for the login button in the header |
 | `NEXT_PUBLIC_DOCS_URL` | URL for the documentation link |
 | `NEXT_PUBLIC_CLIENTS_COUNT` | Number of clients shown in IT Solutions stats (number value) |
@@ -34,20 +35,22 @@ Place a `logo.png` file in `public/logo/` to use a custom logo. If not present, 
 
 ## Legal Documents
 
-Place PDF files in `public/docs/`. Each document has its own visibility rules:
+Place PDF files in `public/docs/`. All four documents are required:
 
-| File | Required | Shown when |
-|---|---|---|
-| `privacy-policy.pdf` | **Yes** | Always — footer, cookie notice, contact form |
-| `cookie-policy.pdf` | **Required if `GA_DATASTREAM_ID` is set** | Only if `GA_DATASTREAM_ID` is set — footer, cookie notice |
-| `data-processing.pdf` | No | Only if the file exists — footer, contact form (second checkbox) |
-| `terms-of-service.pdf` | No | Only if the file exists — footer |
+| File | Description |
+|---|---|
+| `pravila-ispolzovaniya.pdf` | Website Usage Policy - shown in footer (top-left) |
+| `cookie-policy.pdf` | Cookie Policy - shown in footer (top-right), cookie notice |
+| `data-processing.pdf` | Personal Data Processing Notice - shown in footer (bottom-left), contact form checkboxes |
+| `privacy-policy.pdf` | Personal Data Processing Policy - shown in footer (bottom-right), contact form checkboxes |
 
 **Behavior by location:**
 
-- **Footer** — displays all available document links. Links for `cookie-policy.pdf`, `data-processing.pdf`, and `terms-of-service.pdf` are hidden automatically when their conditions are not met.
-- **Cookie notice** — shown only when `GA_DATASTREAM_ID` is set. Contains links to `cookie-policy.pdf` and `privacy-policy.pdf`. If you set `GA_DATASTREAM_ID`, you must also place `cookie-policy.pdf` in `public/docs/`.
-- **Contact form** — always shows the first checkbox with a link to `privacy-policy.pdf`. The second checkbox (with a link to `data-processing.pdf`) is shown only if `data-processing.pdf` exists; when hidden, only the first checkbox is required to submit the form.
+- **Footer** - displays all four document links in a 2×2 grid.
+- **Cookie notice** - shown only when `GA_DATASTREAM_ID` is set. Contains a link to `cookie-policy.pdf` only.
+- **Contact form** - two required checkboxes:
+  1. Confirmation of having read `privacy-policy.pdf` and `data-processing.pdf`.
+  2. Consent to personal data processing as specified in `data-processing.pdf`.
 
 ## Development
 
@@ -70,18 +73,19 @@ npm run start
 
 ### Docker
 
-Using Docker Compose (recommended) — reads all variables from `.env.local` automatically:
+Using Docker Compose (recommended) - reads all variables from `.env.local` automatically:
 
 ```bash
 docker compose up --build
 ```
 
-Or manually — `NEXT_PUBLIC_*` variables must be passed as build args, `FORMSPREE_FORM_ID` and `GA_DATASTREAM_ID` is passed at runtime:
+Or manually - `NEXT_PUBLIC_*` variables must be passed as build args, `FORMSPREE_FORM_ID` and `GA_DATASTREAM_ID` is passed at runtime:
 
 ```bash
 docker build \
   --build-arg NEXT_PUBLIC_BRAND_NAME="..." \
   --build-arg NEXT_PUBLIC_COMPANY_NAME="..." \
+  --build-arg NEXT_PUBLIC_COMPANY_LINK="..." \
   --build-arg NEXT_PUBLIC_HEADER_LOGIN_URL="..." \
   --build-arg NEXT_PUBLIC_DOCS_URL="..." \
   --build-arg NEXT_PUBLIC_CLIENTS_COUNT="..." \

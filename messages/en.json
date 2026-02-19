@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "{companyName} — Next Generation Cloud Services",
-    "description": "{companyName} — a reliable cloud platform for business. Virtual servers, GPU computing, secure storage, and 24/7 support."
+    "title": "{companyName} - Next Generation Cloud Services",
+    "description": "{companyName} - a reliable cloud platform for business. Virtual servers, GPU computing, secure storage, and 24/7 support."
   },
   "header": {
     "login": "Log In",
@@ -32,7 +32,10 @@
         "services": [
           { "title": "Managed Databases", "description": "PostgreSQL, MySQL, MongoDB with automatic backups and high availability." },
           { "title": "CI/CD Platform", "description": "Build and deployment automation with GitLab and GitHub integration." },
-          { "title": "Monitoring", "description": "Grafana and Prometheus — full observability for your infrastructure." },
+          {
+            "title": "Monitoring",
+            "description": "Grafana and Prometheus - full observability for your infrastructure."
+          },
           { "title": "Serverless", "description": "Run functions without managing servers, pay only for actual usage." }
         ]
       },
@@ -57,7 +60,10 @@
       "support": {
         "label": "Support",
         "services": [
-          { "title": "24/7 Technical Support", "description": "Our engineering team is always ready to help — response within 15 minutes." },
+          {
+            "title": "24/7 Technical Support",
+            "description": "Our engineering team is always ready to help - response within 15 minutes."
+          },
           { "title": "Dedicated Account Manager", "description": "A dedicated manager for enterprise clients and project guidance." },
           { "title": "Knowledge Base", "description": "Extensive documentation, guides, and ready-made architectural solutions." },
           { "title": "SLA 99.99%", "description": "Guaranteed availability level with financial accountability." }
@@ -97,22 +103,50 @@
     ]
   },
   "gpuBenefits": {
-    "heading": "Benefits of GPU in the Cloud",
-    "description": "Gain a competitive edge with cloud GPU computing",
+    "heading": "Cloud Platform Benefits",
+    "description": "Focus on your business - let the cloud handle the infrastructure",
     "items": [
-      { "icon": "Zap", "title": "Maximum Performance", "description": "Process petabytes of data and train complex neural networks tens of times faster." },
-      { "icon": "Scale", "title": "Flexible Scaling", "description": "Scale GPU count up or down based on your current workload demands." },
-      { "icon": "DollarSign", "title": "Cost Savings", "description": "Eliminate expensive hardware — pay only for what you actually use." },
-      { "icon": "Clock", "title": "Fast Start", "description": "Launch a GPU instance in 60 seconds and start computing immediately." },
+      {
+        "icon": "Zap",
+        "title": "Maximum Performance",
+        "description": "Powerful infrastructure that keeps your business running at full speed, even under peak load."
+      },
+      {
+        "icon": "Scale",
+        "title": "Flexible Scaling",
+        "description": "Resources on demand: scale in minutes and pay only for what you need."
+      },
+      {
+        "icon": "DollarSign",
+        "title": "Cost Savings",
+        "description": "Eliminate expensive hardware - pay only for what you actually use."
+      },
+      {
+        "icon": "Clock",
+        "title": "Fast Start",
+        "description": "Deploy infrastructure in minutes - no lengthy procurement, approvals, or waiting."
+      },
       { "icon": "Shield", "title": "Reliability & Security", "description": "Isolated environment, data encryption, and compliance with security standards." },
-      { "icon": "Globe", "title": "Global Infrastructure", "description": "Place your workloads closer to users at data centers around the world." },
-      { "icon": "Lock", "title": "Compliance", "description": "GDPR, ISO 27001, and personal data localization requirements compliance." },
-      { "icon": "BarChart3", "title": "Detailed Analytics", "description": "Real-time monitoring of GPU utilization, costs, and performance metrics." }
+      {
+        "icon": "Database",
+        "title": "Flexible Storage",
+        "description": "Object, block, and file storage in one cloud - scale capacity without service interruptions."
+      },
+      {
+        "icon": "LayoutDashboard",
+        "title": "Self-Service Portal",
+        "description": "Full infrastructure control in your browser - deploy and manage resources independently, without an IT department."
+      },
+      {
+        "icon": "BarChart3",
+        "title": "Detailed Analytics",
+        "description": "Real-time monitoring of costs, resources, and performance across your infrastructure."
+      }
     ]
   },
   "itSolutions": {
     "heading": "Modern IT Solutions for Your Business",
-    "description": "We provide a full spectrum of cloud services that allow your company to focus on business growth while we take care of infrastructure management. From startups to enterprises — our platform is ready for any challenge.",
+    "description": "We provide a full spectrum of cloud services that allow your company to focus on business growth while we take care of infrastructure management. From startups to enterprises - our platform is ready for any challenge.",
     "stats": [
       { "value": "99.99%", "label": "Uptime SLA" },
       { "value": "500+", "label": "Clients" },
@@ -135,13 +169,14 @@
       "comment": "Comment",
       "commentPlaceholder": "Describe your request or question...",
       "consent1": "I confirm that I have read the",
-      "consent2Prefix": "I give my free, explicit, and informed consent to the processing of my personal data as specified in the",
+      "consent1And": "and",
+      "consent2Prefix": "I give my free, unambiguous, and informed consent to the processing of my personal data, the list and conditions of which are specified in the",
+      "privacyPolicyLink": "Personal Data Processing Policy",
       "dataProcessingLink": "Notice on Personal Data Processing Conditions",
+      "dataProcessingLink2": "Notice on Personal Data Processing Conditions",
       "consentRequired": "Your consent is required to submit the form",
       "submit": "Submit",
-      "success": "Thank you! We will contact you shortly.",
-      "privacyPolicy": "Personal Data Protection Policy",
-      "dataProcessing": "Notice on Personal Data Processing Conditions"
+      "success": "Thank you! We will contact you shortly."
     },
     "info": {
       "consultationLabel": "Sales Consultation",
@@ -155,10 +190,10 @@
   },
   "footer": {
     "copyrightSuffix": "All rights reserved.",
-    "privacyPolicy": "Privacy Policy",
+    "pravilaIspolzovaniya": "Website Usage Policy",
     "cookiePolicy": "Cookie Policy",
-    "dataProcessing": "Data Processing Policy",
-    "terms": "Terms of Service"
+    "dataProcessing": "Personal Data Processing Notice",
+    "privacyPolicy": "Personal Data Processing Policy"
   },
   "notFound": {
     "code": "404",

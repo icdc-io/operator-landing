@@ -1,4 +1,4 @@
-// Root layout — minimal passthrough.
+// Root layout - minimal passthrough.
 // The [locale] layout handles <html> and <body> tags.
 export default function RootLayout({
   children,

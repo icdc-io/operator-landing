@@ -20,7 +20,7 @@ export default function Logo({ companyName, nameClassName = 'text-gray-900' }: L
         height={36}
         className="h-9 w-auto object-contain flex-shrink-0"
       />
-      <span className={`font-bold text-xl tracking-tight ${nameClassName}`}>{companyName}</span>
+      <span className={`font-bold text-xl tracking-tight whitespace-nowrap ${nameClassName}`}>{companyName}</span>
     </div>
   );
 }
