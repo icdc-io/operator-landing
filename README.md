@@ -9,8 +9,9 @@
 | `NEXT_PUBLIC_COMPANY_LINK` | Optional URL for the company name in the footer copyright (shows as a link with hover underline) |
 | `NEXT_PUBLIC_HEADER_LOGIN_URL` | URL for the login button in the header |
 | `NEXT_PUBLIC_DOCS_URL` | URL for the documentation link |
-| `NEXT_PUBLIC_CLIENTS_COUNT` | Number of clients shown in IT Solutions stats (number value) |
-| `NEXT_PUBLIC_NETWORK_SPEED` | Network speed value shown in IT Solutions stats in Gbit/s (number value) |
+| `NEXT_PUBLIC_UPTIME_SLA` | Uptime SLA value shown in IT Solutions stats (e.g. `99.99%`); set to `0` to hide |
+| `NEXT_PUBLIC_CLIENTS_COUNT` | Number of clients shown in IT Solutions stats (number value); set to `0` to hide |
+| `NEXT_PUBLIC_NETWORK_SPEED` | Network speed value shown in IT Solutions stats in Gbit/s (number value); set to `0` to hide |
 | `NEXT_PUBLIC_CONSULTATION_EMAILS` | Comma-separated Email(s) for connection consultation contact block |
 | `NEXT_PUBLIC_CONSULTATION_PHONES` | Comma-separated Phone(s) for connection consultation contact block |
 | `NEXT_PUBLIC_SUPPORT_EMAILS` | Comma-separated Email(s) for technical support contact block |
@@ -35,20 +36,40 @@ Place a `logo.png` file in `public/logo/` to use a custom logo. If not present, 
 
 ## Legal Documents
 
-Place PDF files in `public/docs/`. All four documents are required:
+Place PDF files in `public/docs/`.
+
+### Required documents
+
+Always displayed in the footer. Must be present:
 
 | File | Description |
 |---|---|
-| `pravila-ispolzovaniya.pdf` | Website Usage Policy - shown in footer (top-left) |
-| `cookie-policy.pdf` | Cookie Policy - shown in footer (top-right), cookie notice |
-| `data-processing.pdf` | Personal Data Processing Notice - shown in footer (bottom-left), contact form checkboxes |
-| `privacy-policy.pdf` | Personal Data Processing Policy - shown in footer (bottom-right), contact form checkboxes |
+| `pravila-ispolzovaniya.pdf` | Website Usage Policy |
+| `cookie-policy.pdf` | Cookie Policy |
+| `privacy-policy.pdf` | Personal Data Processing Policy |
+| `data-processing.pdf` | Personal Data Processing Notice |
 
-**Behavior by location:**
+### Optional documents
 
-- **Footer** - displays all four document links in a 2×2 grid.
-- **Cookie notice** - shown only when `GA_DATASTREAM_ID` is set. Contains a link to `cookie-policy.pdf` only.
-- **Contact form** - two required checkboxes:
+Displayed in the footer only if the corresponding file exists in `public/docs/`:
+
+| File | Description |
+|---|---|
+| `price.pdf` | Price List |
+| `public-contract.pdf` | Public Agreement |
+| `public-contract-sla.pdf` | Service Level Agreement |
+| `payment.pdf` | Payment of Services |
+| `public-contract-legal.pdf` | Position of Public Agreement |
+
+### Footer layout
+
+- If **any optional documents exist**: footer shows two columns — required documents on the left, available optional documents on the right. On mobile, a single column is used with required documents first.
+- If **no optional documents exist**: required documents are displayed in a 2-column grid (single column on mobile).
+
+### Other locations
+
+- **Cookie notice** — shown only when `GA_DATASTREAM_ID` is set. Contains a link to `cookie-policy.pdf` only.
+- **Contact form** — two required checkboxes:
   1. Confirmation of having read `privacy-policy.pdf` and `data-processing.pdf`.
   2. Consent to personal data processing as specified in `data-processing.pdf`.
 
@@ -88,6 +109,7 @@ docker build \
   --build-arg NEXT_PUBLIC_COMPANY_LINK="..." \
   --build-arg NEXT_PUBLIC_HEADER_LOGIN_URL="..." \
   --build-arg NEXT_PUBLIC_DOCS_URL="..." \
+  --build-arg NEXT_PUBLIC_UPTIME_SLA="..." \
   --build-arg NEXT_PUBLIC_CLIENTS_COUNT="..." \
   --build-arg NEXT_PUBLIC_NETWORK_SPEED="..." \
   --build-arg NEXT_PUBLIC_CONSULTATION_EMAILS="..." \

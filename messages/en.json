@@ -148,9 +148,15 @@
     "heading": "Modern IT Solutions for Your Business",
     "description": "We provide a full spectrum of cloud services that allow your company to focus on business growth while we take care of infrastructure management. From startups to enterprises - our platform is ready for any challenge.",
     "stats": [
+      {
+        "value": "24/7",
+        "label": "Support"
+      },
       { "value": "99.99%", "label": "Uptime SLA" },
-      { "value": "500+", "label": "Clients" },
-      { "value": "24/7", "label": "Support" },
+      {
+        "value": "500+",
+        "label": "Clients"
+      },
       { "value": "10 Gbps", "label": "Network" }
     ]
   },
@@ -193,7 +199,12 @@
     "pravilaIspolzovaniya": "Website Usage Policy",
     "cookiePolicy": "Cookie Policy",
     "dataProcessing": "Personal Data Processing Notice",
-    "privacyPolicy": "Personal Data Processing Policy"
+    "privacyPolicy": "Personal Data Processing Policy",
+    "serviceLevelAgreement": "Service Level Agreement",
+    "paymentOfServices": "Payment of Services",
+    "priceList": "Price List",
+    "publicAgreement": "Public Agreement",
+    "positionOfPublicAgreement": "Position of Public Agreement"
   },
   "notFound": {
     "code": "404",

@@ -9,14 +9,29 @@ export default async function ItSolutionsSection() {
   const t = await getTranslations('itSolutions');
   const stats = t.raw('stats') as StatItem[];
 
+  const uptimeSla = process.env.NEXT_PUBLIC_UPTIME_SLA;
   const clientsCount = process.env.NEXT_PUBLIC_CLIENTS_COUNT;
   const networkSpeed = process.env.NEXT_PUBLIC_NETWORK_SPEED;
 
-  const resolvedStats = stats.map((stat, idx) => {
-    if (idx === 1 && clientsCount) return { ...stat, value: `${clientsCount}+` };
-    if (idx === 3 && networkSpeed) return { ...stat, value: `${networkSpeed} Гбит/с` };
-    return stat;
-  });
+  const isZero = (v: string | undefined) => v === '0';
+
+  const resolvedStats = stats
+    .map((stat, idx) => {
+      if (idx === 1) {
+        if (isZero(uptimeSla)) return null;
+        if (uptimeSla) return { ...stat, value: uptimeSla };
+      }
+      if (idx === 2) {
+        if (isZero(clientsCount)) return null;
+        if (clientsCount) return { ...stat, value: `${clientsCount}+` };
+      }
+      if (idx === 3) {
+        if (isZero(networkSpeed)) return null;
+        if (networkSpeed) return { ...stat, value: `${networkSpeed} Гбит/с` };
+      }
+      return stat;
+    })
+    .filter((stat): stat is StatItem => stat !== null && stat.value !== '0');
 
   return (
     <section className="py-20 bg-slate-800">
