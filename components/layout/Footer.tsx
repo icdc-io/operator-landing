@@ -40,14 +40,14 @@ export default async function Footer() {
             <div className="flex flex-col sm:flex-row gap-x-12 gap-y-6 text-sm">
               <div className="flex flex-col gap-y-3">
                 {REQUIRED_DOCS.map(({ key, href }) => (
-                  <Link key={key} href={href} className="hover:text-white transition-colors duration-150">
+                  <Link key={key} href={href} className="hover:text-white transition-colors duration-150" target="_blank" rel="noopener noreferrer">
                     {t(key)}
                   </Link>
                 ))}
               </div>
               <div className="flex flex-col gap-y-3">
                 {availableOptional.map(({ key, file }) => (
-                  <Link key={key} href={`/docs/${file}`} className="hover:text-white transition-colors duration-150">
+                  <Link key={key} href={`/docs/${file}`} className="hover:text-white transition-colors duration-150" target="_blank" rel="noopener noreferrer">
                     {t(key)}
                   </Link>
                 ))}
@@ -56,7 +56,7 @@ export default async function Footer() {
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-3 text-sm">
               {REQUIRED_DOCS.map(({ key, href }) => (
-                <Link key={key} href={href} className="hover:text-white transition-colors duration-150">
+                <Link key={key} href={href} className="hover:text-white transition-colors duration-150" target="_blank" rel="noopener noreferrer">
                   {t(key)}
                 </Link>
               ))}
